@@ -82,7 +82,6 @@ dependencies = [
     "pyparsing>=3.0.6, <4",
     "python-dateutil",
     "python-dotenv",
-    "python-geohash",
     "pyarrow>=14.0.1, <15",
     "pyyaml>=6.0.0, <7.0.0",
     "PyJWT>=2.4.0, <3.0",
@@ -198,7 +197,6 @@ development = [
     "pytest<8.0.0", # hairy issue with pytest >=8 where current_app proxies are not set in time
     "pytest-cov",
     "pytest-mock",
-    "python-ldap>=3.4.4",
     "ruff",
     "sqloxide",
     "statsd",
@@ -385,8 +383,6 @@ authorized_licenses = [
 # Seems ok, might need legal review
 # https://github.com/urschrei/pypolyline/blob/master/LICENSE.md
 polyline = "2"
-# Apache 2.0 https://github.com/hkwi/python-geohash
-python-geohash = "0"
 # --------------------------------------------------------------
 
 # TODO REMOVE THESE DEPS FROM CODEBASE

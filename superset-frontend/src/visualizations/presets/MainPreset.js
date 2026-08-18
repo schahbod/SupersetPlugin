@@ -22,6 +22,8 @@ import {
   Preset,
   VizType,
 } from '@superset-ui/core';
+
+
 import CalendarChartPlugin from '@superset-ui/legacy-plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/legacy-plugin-chart-chord';
 import CountryMapChartPlugin from '@superset-ui/legacy-plugin-chart-country-map';
@@ -31,6 +33,7 @@ import PairedTTestChartPlugin from '@superset-ui/legacy-plugin-chart-paired-t-te
 import ParallelCoordinatesChartPlugin from '@superset-ui/legacy-plugin-chart-parallel-coordinates';
 import PartitionChartPlugin from '@superset-ui/legacy-plugin-chart-partition';
 import RoseChartPlugin from '@superset-ui/legacy-plugin-chart-rose';
+import SupersetPluginChartKpiCard from '@superset-ui/plugin-chart-kpi-card';
 import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
@@ -51,8 +54,8 @@ import {
   EchartsTimeseriesChartPlugin,
   EchartsTimeseriesBarChartPlugin,
   EchartsTimeseriesLineChartPlugin,
-  EchartsTimeseriesScatterChartPlugin,
   EchartsTimeseriesSmoothLineChartPlugin,
+  EchartsTimeseriesScatterChartPlugin,
   EchartsTimeseriesStepChartPlugin,
   EchartsGraphChartPlugin,
   EchartsGaugeChartPlugin,
@@ -100,6 +103,9 @@ export default class MainPreset extends Preset {
         new BigNumberChartPlugin().configure({ key: VizType.BigNumber }),
         new BigNumberTotalChartPlugin().configure({
           key: VizType.BigNumberTotal,
+        }),
+        new SupersetPluginChartKpiCard().configure({
+          key: VizType.KpiCard,
         }),
         new EchartsBoxPlotChartPlugin().configure({ key: VizType.BoxPlot }),
         new BubbleChartPlugin().configure({ key: VizType.LegacyBubble }),
