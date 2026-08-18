@@ -91,7 +91,7 @@ export const getLayer: getLayerType<unknown> = function (
     cellSize: Number(cellSize || '200'),
     aggregation: aggregation.toUpperCase(),
     getPosition: (d: { position: number[]; weight: number }) =>
-      d.position as Position,
+      d.position as unknown as Position,
     getWeight: (d: { weight: number }) => d.weight || 0,
     ...commonLayerProps(fd, setTooltip, setTooltipContent),
   });
