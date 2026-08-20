@@ -140,7 +140,7 @@ export default function transformProps(chartProps: ChartProps): SupersetPluginCh
         const donePercent = total > 0 ? (done / total) * 100 : 0;
 
         return {
-          company: company || 'Unknown',
+          company: company || 'Unknown Company',
           done,
           open,
           donePercent,
@@ -157,7 +157,7 @@ export default function transformProps(chartProps: ChartProps): SupersetPluginCh
               'name',
             ]) ?? '',
           ).trim();
-          const companyKey = company || 'Unknown';
+          const companyKey = company || 'Unknown Company';
           const status = toComparableStatus(
             getFirstDefinedValue(row, [typedFormData.status_column, 'Status', 'status']),
           );
