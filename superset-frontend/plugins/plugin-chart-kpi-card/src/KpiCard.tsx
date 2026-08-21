@@ -127,7 +127,7 @@ const Card: any = styled.article`
 `;
 
 export default function KpiCard({ tile, doneLabel, openLabel }: KpiCardProps) {
-  const companyName = String(tile.company ?? '').trim() || 'Unknown';
+  const companyName = String(tile.company ?? '').trim() || 'Unknown Company';
   const total = tile.done + tile.open;
   const donePercent = total > 0 ? (tile.done / total) * 100 : 0;
   const pieStyle: React.CSSProperties = {
