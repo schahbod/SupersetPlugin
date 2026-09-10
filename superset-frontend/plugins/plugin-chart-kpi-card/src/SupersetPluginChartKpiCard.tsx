@@ -68,7 +68,7 @@ export default function SupersetPluginChartKpiCard(props: SupersetPluginChartKpi
 
   return (
     <div className="dashboard" style={dashboardStyle}>
-      {normalizedTiles.map((tile, index) => (
+      {normalizedTiles.map((tile, index) => ( 
         <KpiCard
           key={`${tile.company}-${tile.open}-${tile.done}-${index}`}
           tile={tile}
@@ -79,3 +79,5 @@ export default function SupersetPluginChartKpiCard(props: SupersetPluginChartKpi
     </div>
   );
 }
+
+  

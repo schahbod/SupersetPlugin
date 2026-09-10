@@ -136,8 +136,8 @@ export default function KpiCard({ tile, doneLabel, openLabel }: KpiCardProps) {
 
   const BIG = 52;
   const SMALL = 30;
-  const openSize = tile.open >= tile.done ? BIG : SMALL;
-  const doneSize = tile.done > tile.open ? BIG : SMALL;
+  const openSize = BIG;
+  const doneSize = SMALL;
 
   return (
     <Card>
